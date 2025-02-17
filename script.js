@@ -1,8 +1,8 @@
 import * as THREE from 'https://unpkg.com/three@0.152.2/build/three.module.js';
 import TWEEN from 'https://unpkg.com/@tweenjs/tween.js@20.0.0/dist/tween.esm.js';
 
-// Creates the scene
-const scene = new THREE.Scene();
+if (window.matchMedia("(orientation: landscape)").matches) {
+  const scene = new THREE.Scene();
 
 //constants
 const jackpotColor = new THREE.Color('rgb(178,145,70)');
@@ -288,3 +288,5 @@ function onMouseClick(event) {
 }
 
 window.addEventListener('click', onMouseClick);
+
+}
